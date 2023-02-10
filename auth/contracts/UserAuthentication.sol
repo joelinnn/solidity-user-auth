@@ -12,7 +12,7 @@ contract Auth {
 
     mapping(address => UserDetail) user;
 
-    function register(
+    function register (
         address _address,
         string memory _name,
         string memory _password,
@@ -27,10 +27,7 @@ contract Auth {
         return true;
     }
 
-    function login(address _address, string memory _password)
-        public
-        returns (bool)
-    {
+    function login (address _address, string memory _password) public returns (bool) {
         if (
             keccak256(abi.encodePacked(user[_address].password)) ==
             keccak256(abi.encodePacked(_password))
@@ -42,7 +39,7 @@ contract Auth {
         }
     }
 
-    function checkIsUserLogged(address _address) public view returns (bool) {
+    function checkIsUserLogged (address _address) public view returns (bool) {
         return (user[_address].isUserLoggedIn);
     }
 

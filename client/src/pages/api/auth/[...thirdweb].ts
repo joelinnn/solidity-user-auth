@@ -6,7 +6,7 @@ export const { ThirdwebAuthHandler, getUser } = ThirdwebAuth({
   domain: process.env.NEXT_PUBLIC_DOMAIN || "",
   wallet: new PrivateKeyWallet(process.env.THIRDWEB_AUTH_KEY || ""),
   callbacks: {
-    onLogin: async ({ username, address, email }: any) => {
+    onLogin: async ({ username, password, address, email }: any) => {
 
       const userInfo = await prisma.user.findFirst({
         where: {
@@ -18,6 +18,7 @@ export const { ThirdwebAuthHandler, getUser } = ThirdwebAuth({
         await prisma.user.create({
           data: {
             username: username,
+            password: password,
             email: email,
             address: address
           }

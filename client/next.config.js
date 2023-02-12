@@ -3,7 +3,7 @@ const { withTamagui } = require('@tamagui/next-plugin')
 
 const nextConfig = {
   reactStrictMode: true,
-  basePath: ''
+  basePath: './src'
 }
 
 module.exports = function (name, { nextConfig }) {

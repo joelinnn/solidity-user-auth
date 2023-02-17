@@ -1,16 +1,15 @@
 import type { AppProps } from "next/app";
 import { ChainId, ThirdwebProvider } from "@thirdweb-dev/react";
-import { ThemeProvider } from "@theme-ui/core"
-import theme from '@/styles/theme'
+import { MantineProvider } from '@mantine/core'
 // This is the chainId your dApp will work on.
 const activeChainId = ChainId.Mainnet;
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ThirdwebProvider desiredChainId={activeChainId}>
-      <ThemeProvider theme={theme}>
+      <MantineProvider>
         <Component {...pageProps} />
-      </ThemeProvider>
+      </MantineProvider>
     </ThirdwebProvider>
   );
 }

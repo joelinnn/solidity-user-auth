@@ -1,7 +1,5 @@
-
-import { Web3Button } from "@thirdweb-dev/react"
 import { ActionIcon } from "@mantine/core"
-import { IconSettings } from "@tabler/icons"
+import { IconSettings } from "@tabler/icons-react"
 import { useRouter } from "next/router"
 export const LoginButton = () => {
 

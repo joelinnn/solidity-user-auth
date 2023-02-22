@@ -6,7 +6,6 @@ import { LoginButton } from "@/components";
 const Home: NextPage = () => {
   return (
     <>
-      Hello
       <LoginButton/>
     </>
   );

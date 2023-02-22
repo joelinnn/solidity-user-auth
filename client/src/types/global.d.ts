@@ -5,3 +5,11 @@ declare global {
     var prisma: PrismaClient
   }
 }
+
+declare interface RegisterUserProps {
+  name: string;
+  email: string;
+  password: string;
+  cnic?: number;
+  register: boolean;
+}

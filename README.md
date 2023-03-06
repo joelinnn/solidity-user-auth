@@ -1,1 +1,2 @@
-# web3
+
+smart contract for user authentication

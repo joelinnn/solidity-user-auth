@@ -1,2 +1,6 @@
 
-smart contract for user authentication
+# A simple smart contract for user authentication!
+
+
+
+
